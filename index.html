@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <title>Система отбора друзей Аллы</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div id="login">
+  <h1>Система отбора друзей Аллы</h1>
+  <p>Доступ только для кандидатов</p>
+
+  <input id="loginInput" placeholder="Логин">
+  <input id="passInput" type="password" placeholder="Пароль">
+  <button onclick="auth()">Войти</button>
+
+  <p id="error"></p>
+</div>
+
+<div id="game" class="hidden">
+  <h2>🥒 Найди золотой кабачок 🥒</h2>
+
+  <p id="status">
+    Если за 100 раундов ты не найдёшь золотой кабачок —
+    Алла не примет тебя в друзья.
+  </p>
+
+  <p id="roundText">Раунд: 0 / 100</p>
+
+  <div id="field"></div>
+</div>
+
+<!-- МОДАЛЬНОЕ ОКНО (СКРЫТО ПО УМОЛЧАНИЮ) -->
+<div id="modal" class="hidden">
+  <div id="modalContent">
+    <img id="modalImg">
+    <p id="modalText"></p>
+    <button onclick="closeModal()">Продолжить</button>
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
